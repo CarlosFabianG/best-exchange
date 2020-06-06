@@ -1,17 +1,16 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <main>
+    <bx-Header/>
+  </main>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import BxHeader from '@/components/BxHeader'
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+   BxHeader
   }
 };
 </script>
