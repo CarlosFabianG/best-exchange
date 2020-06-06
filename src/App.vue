@@ -1,16 +1,19 @@
 <template>
   <main>
-    <bx-Header/>
+    <bx-Header />
+    <bx-assets-table />
   </main>
 </template>
 
 <script>
 import BxHeader from '@/components/BxHeader'
+import BxAssetsTable from '@/components/BxAssetsTable'
 
 export default {
   name: "App",
   components: {
-   BxHeader
+   BxHeader,
+   BxAssetsTable
   }
 };
 </script>
