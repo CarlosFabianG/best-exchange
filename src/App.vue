@@ -1,19 +1,17 @@
 <template>
   <main>
     <bx-header />
-    <router-view class="container px-5 sm:px-20 py-20 flex justify-center"/>
+    <router-view class="container px-5 sm:px-20 py-20 flex justify-center" />
   </main>
 </template>
 
 <script>
-import BxHeader from '@/components/BxHeader'
-
+import BxHeader from "@/components/BxHeader";
 
 export default {
   name: "App",
   components: {
-   BxHeader
-   
+    BxHeader
   }
 };
 </script>

@@ -1,15 +1,14 @@
 <template>
-    <div>
-        <bx-assets-table />
-    </div>
+  <div>
+    <bx-assets-table />
+  </div>
 </template>
 
-
 <script>
-import BxAssetsTable from "@/components/BxAssetsTable"
+import BxAssetsTable from "@/components/BxAssetsTable";
 export default {
-    name: "Home",
+  name: "Home",
 
-    components: { BxAssetsTable }
-}
+  components: { BxAssetsTable }
+};
 </script>
