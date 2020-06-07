@@ -1,19 +1,19 @@
 <template>
   <main>
-    <bx-Header />
-    <bx-assets-table />
+    <bx-header />
+    <router-view class="container px-5 sm:px-20 py-20 flex justify-center"/>
   </main>
 </template>
 
 <script>
 import BxHeader from '@/components/BxHeader'
-import BxAssetsTable from '@/components/BxAssetsTable'
+
 
 export default {
   name: "App",
   components: {
-   BxHeader,
-   BxAssetsTable
+   BxHeader
+   
   }
 };
 </script>
