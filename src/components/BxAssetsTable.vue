@@ -29,7 +29,13 @@
           />
         </td>
         <td>#{{ a.rank }}</td>
+        <router-link 
+        class="hover:underline text-green-600"
+        :to="{name:'coin-detail', params: {id: a.id}}">
         <td>{{ a.name }}</td>
+        </router-link>
+        <small class="ml-1 text-gray-500"> {{a.symbol}}</small>
+         
         <td>{{ a.priceUsd | dollar }}</td>
         <td>{{ a.marketCapUsd | dollar }}</td>
         <td
@@ -41,20 +47,33 @@
         >
           {{ a.changePercent24Hr | percent }}
         </td>
-        <td class="hidden sm:block"></td>
+        <td class="hidden sm:block">
+          <bx-button @custom-click="goToCoin(a.id)">
+            <span>Detalle</span>
+          </bx-button>
+        </td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
+import BxButton from '@/components/BxButton'
 export default {
   name: "PxAssetsTable",
+
+  components: { BxButton },
 
   props: {
     assets: {
       type: Array,
       default: () => []
+    }
+  },
+
+  methods: {
+    goToCoin(id){
+      this.$router.push({ name: 'coin-detail', params: {id}})
     }
   }
 };
