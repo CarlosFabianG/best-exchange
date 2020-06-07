@@ -82,7 +82,7 @@
             <td>{{ m.priceUsd | dollar }}</td>
             <td>{{ m.baseSymbol }} / {{ m.quoteSymbol }} </td>
             <td>
-              <bx-button v-if="!m.url" @custom-click="getWebSite(m)">
+              <bx-button :is-loading="m.isLoading || false" v-if="!m.url" @custom-click="getWebSite(m)">
                 <slot>Obtener Link</slot>
               </bx-button>
               <a v-else class="hover:underline text-green-600" target="_blanck">{{ m.url }}</a>
@@ -139,9 +139,14 @@ export default {
   methods: {
 
     getWebSite(exchange){
+
+      this.$set(exchange, 'isLoading', true)
+
       return api.getExchange(exchange.exchangeId)
         .then(res => {
           this.$set(exchange, 'url', res.exchangeUrl)
+        }).finally(() => {
+          this.$set(exchange, 'isLoading', false)
         })
     },
     getCoin() {
