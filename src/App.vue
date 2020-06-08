@@ -13,23 +13,23 @@ export default {
   components: {
     BxHeader
   },
-  data(){
+  data() {
     return {
       links: [
         {
-          title:'BTC',
-          to: { name:'coin-detail', params: { id:'bitcoin' } }
+          title: "BTC",
+          to: { name: "coin-detail", params: { id: "bitcoin" } }
         },
         {
-          title:'ETH',
-          to: { name:'coin-detail', params: { id:'ethereum' } }
+          title: "ETH",
+          to: { name: "coin-detail", params: { id: "ethereum" } }
         },
         {
-          title:'XRP',
-          to: { name:'coin-detail', params: { id:'ripple' } }
+          title: "XRP",
+          to: { name: "coin-detail", params: { id: "ripple" } }
         }
       ]
-    }
+    };
   }
 };
 </script>

@@ -20,10 +20,11 @@ export default {
     };
   },
   created() {
-    this.isLoading = true
-    api.getAssets()
-    .then(assets => (this.assets = assets))
-    .finally( () => this.isLoading = false)
+    this.isLoading = true;
+    api
+      .getAssets()
+      .then(assets => (this.assets = assets))
+      .finally(() => (this.isLoading = false));
   }
 };
 </script>
